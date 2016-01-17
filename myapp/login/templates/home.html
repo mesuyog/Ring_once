@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+{% block head %}Welcome to Django{% endblock %}
+{% block content %}
+    <p>Welcome {{ user.username }} !!!</p>
+    <p>your email address is {{ user.email }} !!!</p>
+
+    <p>phone number is
+        {% for p in obj %}
+            {% if forloop.last %}
+            {{ p.phone }}
+            {% endif %}
+        {% endfor %}
+
+        !!!</p>
+
+
+
+
+
+
+    <a href="/logout/">Logout</a>
+{% endblock %}
